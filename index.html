@@ -423,6 +423,7 @@ const D = [
 ["Enumerate groups + users","nxc ldap {DC} -u {USER} -p {PASS} --users --groups",["example"]],
 ["Password not required","nxc ldap {DC} -u {USER} -p {PASS} --password-not-required",["high"]],
 ["Admin count users","nxc ldap {DC} -u {USER} -p {PASS} --admin-count",["high"]],
+["active user","nxc ldap {DC} -u {USER} -p {PASS} --active-users,"["high"]],
 ["Get domain SID","nxc ldap {DC} -u {USER} -p {PASS} --get-sid"],
 ["Find unconstrained delegation","nxc ldap {DC} -u {USER} -p {PASS} --trusted-for-delegation",["high"]],
 ["Find all delegation","nxc ldap {DC} -u {USER} -p {PASS} --find-delegation",["high"]],
@@ -447,6 +448,8 @@ const D = [
 ["User description search","nxc ldap {DC} -u {USER} -p {PASS} -M user-desc",["example"]],
 ["User description with keywords","nxc ldap {DC} -u {USER} -p {PASS} -M user-desc -o KEYWORDS=pwd,admin",["example"]],
 ["Group membership","nxc ldap {DC} -u {USER} -p {PASS} -M groupmembership -o USER=julio",["example"]],
+
+["Listing Members of a Specific Group","nxc ldap {DC} -u {USER} -p {PASS} --groups "Backup Operators"",["example"]],
 ["ldap-checker module","nxc ldap {DC} -u {USER} -p {PASS} -M ldap-checker"],
 ["ADCS module","nxc ldap {DC} -u {USER} -p {PASS} -M adcs",["example"]],
 ["ADCS specific CA","nxc ldap {DC} -u {USER} -p {PASS} -M adcs -o SERVER=INLANEFREIGHT-DC01-CA",["example"]],
