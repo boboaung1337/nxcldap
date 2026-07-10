@@ -472,6 +472,7 @@ const D = [
 ["MSSQL execute command","nxc mssql {DC} -u {USER} -p {PASS} --local-auth -x \"whoami\"",["example"]],
 ["MSSQL execute with privs","nxc mssql {DC} -u {USER} -p {PASS} --local-auth -x \"whoami /priv\"",["example"]],
 ["MSSQL Kerberos","nxc mssql {DC} --use-kcache",["osep"]],
+["MSSQL Exploitation","nxc mssql {DC} -u {USER} -p {PASS} -M enum_impersonate --local-auth",["example"]],
 ["MSSQL with multiple users","nxc mssql {DC} -u julio grace -p {PASS} --local-auth",["example"]],
 ]},
 {t:"File Operations",c:[
