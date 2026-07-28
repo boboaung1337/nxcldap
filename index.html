@@ -485,6 +485,7 @@
         'ldap': {
           template: `nxc ldap {ip} -u {user} {auth} --query "(objectClass=computer)" "cn,ms-MCS-AdmPwd,msLAPS-Password"
         nxc ldap {ip} -u {user} {auth} --query "(objectClass=organizationalUnit)" "cn,description"
+        nxc ldap {ip} -u {user} {auth} --query "(sAMAccountName=Administrator)" ""
         nxc ldap {ip} -u {user} {auth} --find-delegation
         nxc ldap {ip} -u {user} {auth} --trusted-for-delegation
         nxc ldap {ip} -u {user} {auth} --computers
@@ -515,6 +516,7 @@
         'ldap-k': {
           template: `nxc ldap {ip} -u {user} {auth} -k --query "(objectClass=computer)" "cn,ms-MCS-AdmPwd,msLAPS-Password"
         nxc ldap {ip} -u {user} {auth} -k --query "(objectClass=organizationalUnit)" "cn,description"
+        nxc ldap {ip} -u {user} {auth} --query "(sAMAccountName=Administrator)" ""
         nxc ldap {ip} -u {user} {auth} -k --find-delegation
         nxc ldap {ip} -u {user} {auth} -k --trusted-for-delegation
         nxc ldap {ip} -u {user} {auth} -k --computers
